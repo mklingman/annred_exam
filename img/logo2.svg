@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="305" height="305" viewBox="0 0 305 305">
+	<defs>
+		<style>
+			.a {
+				clip-path: url(#b);
+			}
+
+			.b {
+				fill: #ffaeae;
+				stroke: #707070;
+			}
+
+			.c {
+				fill: #0021f5;
+				font-size: 187px;
+				font-family: LaNord-Bold, La Nord;
+				font-weight: 700;
+			}
+
+			.d {
+				stroke: none;
+			}
+
+			.e {
+				fill: none;
+			}
+
+			.f {
+				fill: #fff;
+			}
+
+		</style>
+		<clipPath id="b">
+			<rect width="305" height="305" />
+		</clipPath>
+	</defs>
+	<g id="a" class="a">
+		<rect class="f" width="305" height="305" />
+		<g class="b" transform="translate(11 11)">
+			<circle class="d" cx="141.5" cy="141.5" r="141.5" />
+			<circle class="e" cx="141.5" cy="141.5" r="141" />
+		</g><text class="c" transform="translate(17 210)">
+			<tspan x="0" y="0">AR</tspan>
+		</text>
+	</g>
+</svg>

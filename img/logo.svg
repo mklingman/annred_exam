@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="305" height="305" viewBox="0 0 305 305">
+  <defs>
+    <clipPath id="clip-logo">
+      <rect width="305" height="305"/>
+    </clipPath>
+  </defs>
+  <g id="logo" clip-path="url(#clip-logo)">
+    <rect width="305" height="305" fill="#fff"/>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(11 11)" fill="#ffaeae" stroke="#707070" stroke-width="1">
+      <circle cx="141.5" cy="141.5" r="141.5" stroke="none"/>
+      <circle cx="141.5" cy="141.5" r="141" fill="none"/>
+    </g>
+    <text id="AR" transform="translate(17 210)" fill="#0021f5" font-size="187" font-family="LaNord-Bold, La Nord" font-weight="700"><tspan x="0" y="0">AR</tspan></text>
+  </g>
+</svg>

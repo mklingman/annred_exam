@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+
+}
+
+
+/****SLIDESHOW STYLING******/
+#wrapper {
+	width: 100%;
+	max-width: 964px;
+	position: relative;
+}
+
+#carousel {
+	overflow: auto;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+
+#carousel::-webkit-scrollbar {
+	height: 0;
+}
+
+#tilbage,
+#frem {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	background: white;
+	border: none;
+	padding: 8px;
+	border-radius: 50%;
+	outline: 0;
+	cursor: pointer;
+	position: absolute;
+}
+
+#tilbage {
+	top: 50%;
+	left: 0;
+	transform: translate(50%, -50%);
+	display: none;
+}
+
+#frem {
+	top: 50%;
+	right: 0;
+	transform: translate(-50%, -50%);
+}
+
+#indhold {
+	display: grid;
+	grid-gap: 16px;
+	grid-auto-flow: column;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.slide_billede {
+	width: 310px;
+	height: 310px;
+}

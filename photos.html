@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Ann Red Portfolio">
+	<!--__favicon__-->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<!--	----->
+
+	<link rel="stylesheet" href="Fotos.css">
+	<title>photos</title>
+</head>
+
+<body class="body2">
+	<header class="header2">
+		<div class="container">
+			<nav>
+				<h1 class="portfolio"><a class="newhead" href="index.html">PHO<span>T</span>OS</a></h1>
+				<ul>
+					<li><a class="link2" href="index.html">Home</a></li>
+					<li><a class="link2" href="photos.html">Photos</a></li>
+					<li><a class="link2" href="draw.html">Draw</a></li>
+					<li><a class="link2" href="video.html">Video</a></li>
+					<li><a class="link2" href="about.html">About</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+	<main>
+		<div class="wrapper">
+
+
+			<!-- HERE the PICTURES ARE PLACED IN CONTENT AND MAKE the SLIDE --->
+			<div id="wrapper">
+				<div id="carousel">
+					<div id="indhold">
+					</div>
+				</div>
+
+				<!-- TEMPLATE FOR PICTURES --->
+				<template>
+					<div class="slide_billede">
+						<img src="" alt="" class="slide_billede">
+						<h6 class="picname">Title</h6>
+					</div>
+				</template>
+
+				<!-- BUTTONS --->
+
+				<button id="tilbage">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<path fill="none" d="M0 0h24v24H0V0z" />
+						<path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+					</svg>
+				</button>
+
+				<button id="frem">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<path fill="none" d="M0 0h24v24H0V0z" />
+						<path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+					</svg>
+				</button>
+			</div>
+		</div>
+
+
+	</main>
+	<footer>
+		<div>created by hand with heart © KRAFTWOOD 2020
+		</div>
+	</footer>
+
+	<!----------------------javascript------------------>
+
+
+	<script>
+		document.addEventListener("DOMContentLoaded", start);
+
+		// TEMPLATE CONTENT IS PLACED IN CLASS CONTENT
+		// AND I FETCH JSON FROM MY URL
+
+		const slide = document.querySelector("#indhold");
+		const template = document.querySelector("template").content;
+
+
+		const url = "http://popispop.net/wordpress/wp-json/wp/v2/gallery?per_page=100";
+
+		async function start() {
+			const respons = await fetch(url);
+			const json = await respons.json();
+			vis(json);
+		}
+
+		// CONTENTS CLONE AND PLACED
+
+		function vis(slideshow) {
+			console.log(slideshow)
+			slideshow.forEach(slideshow => {
+				const klon = template.cloneNode(true);
+				klon.querySelector("img").src = slideshow.picture.guid;
+				klon.querySelector("h6").innerHTML = slideshow.photo_name;
+				slide.appendChild(klon);
+			})
+		}
+
+	</script>
+
+
+
+	<script>
+		//SLIDER CAROUSEL
+
+		const gap = 16;
+
+		const carousel = document.getElementById("carousel"),
+			//            indhold = document.getElementById("indhold"),
+			frem = document.getElementById("frem"),
+			tilbage = document.getElementById("tilbage");
+
+
+		// FORWARD BUTTON.SCROLLER BEHIND THE WIDTH + CONSTA GAP
+
+		frem.addEventListener("click", e => {
+			carousel.scrollBy(width + gap, 0);
+			if (carousel.scrollWidth !== 0) {
+				tilbage.style.display = "flex";
+			}
+			if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+				frem.style.display = "none";
+			}
+		});
+
+		//Back Button
+
+		tilbage.addEventListener("click", e => {
+			carousel.scrollBy(-(width + gap), 0);
+			if (carousel.scrollLeft - width - gap <= 0) {
+				tilbage.style.display = "none";
+			}
+			if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+				frem.style.display = "flex";
+			}
+		});
+		let width = carousel.offsetWidth;
+		window.addEventListener("resize", e => (width = carousel.offsetWidth));
+
+	</script>
+
+</body>
+
+</html>
