@@ -10,9 +10,11 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-/*	overflow-x: hidden;*/
+	overflow-x: hidden;
 
 }
+
+
 
 
 /*SoMe buttons*/
@@ -966,26 +968,10 @@ div.img {
 }
 
 @media all and (min-width:360px) and (max-width:700px) {
-	.container4 {
-		/*		overflow-x: inherit;*/
-	}
+
 
 	.column2 {
-/*		overflow-x: scroll;*/
+		overflow-x: visible;
 	}
 
-
-	/*
-	.myfloat {
-		float: left;
-		width: 90%;
-		height: auto;
-
-
-	}
-*/
-
-	/*
-	.aboutfooter {}
-*/
 }
