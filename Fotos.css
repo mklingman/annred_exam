@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	/*	overflow-x: hidden;*/
+	overflow-x: hidden;
 
 }
 
@@ -671,8 +671,19 @@ div.img {
 
 @media all and (min-width:360px) and (max-width:700px) {
 
+	/*
+	* {
+
+		overflow-x: visible;
+
+	}
+*/
+
+
+
 	/*	Carousel*/
 	#indhold {
+		overflow-x: visible;
 		display: grid;
 		grid-gap: 20px;
 		grid-auto-flow: column;
@@ -682,6 +693,7 @@ div.img {
 	}
 
 	#indhold2 {
+		overflow-x: visible;
 		display: grid;
 		grid-gap: 20px;
 		grid-auto-flow: column;

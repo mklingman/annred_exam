@@ -10,7 +10,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	/*	overflow-x: hidden;*/
+/*	overflow-x: hidden;*/
 
 }
 
@@ -601,14 +601,7 @@ footer {
 	padding-top: 2rem;
 	color: #fff;
 
-	/*	------*/
-
-
-
 }
-
-
-
 
 
 }
@@ -970,5 +963,29 @@ div.img {
 	.email .linkcolormore {
 		letter-spacing: 10px;
 	}
+}
 
+@media all and (min-width:360px) and (max-width:700px) {
+	.container4 {
+		/*		overflow-x: inherit;*/
+	}
+
+	.column2 {
+/*		overflow-x: scroll;*/
+	}
+
+
+	/*
+	.myfloat {
+		float: left;
+		width: 90%;
+		height: auto;
+
+
+	}
+*/
+
+	/*
+	.aboutfooter {}
+*/
 }
