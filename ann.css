@@ -3,8 +3,24 @@
 	padding: 0;
 	box-sizing: border-box;
 	overflow-x: hidden;
+}
+
+/*/----------*audio buttons--------*/
+.audiobuttons {
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 8em;
 
 }
+
+/*
+.btnplay,
+.btnstop {
+
+	background-color: gainsboro;
+}
+*/
+
 
 
 /*new iframe try*/
@@ -576,6 +592,14 @@ div.img {
 
 
 @media all and (min-width:360px) and (max-width:700px) {
+
+	.audiobuttons {
+
+		justify-content: center;
+		padding-right: 0;
+		padding-top: 5px;
+	}
+
 
 	.homebg {
 		background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .1)),

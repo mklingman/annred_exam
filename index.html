@@ -44,10 +44,41 @@
 			<p class="photographer">VISUAL ARTIST
 			</p>
 		</div>
+		<!-------------------------audio player------------------------------------>
+		<div class="audiobuttons">
+			<button class="btnplay" id="btnmusic">play</button>
+
+			<button class="btnstop" id="btnmusicstop">stop</button>
+			<audio id="myAudio">
+				<source src="sound/strange-fruit.mp3" type="audio/mpeg">
+			</audio>
+		</div>
 
 	</header>
 
+	<script>
+		let audioEffect = document.querySelector("#myAudio");
 
+		let btnmusic =
+			document.querySelector("#btnmusic");
+
+		btnmusic.addEventListener("click", function() {
+			audioEffect.play();
+			console.log(this)
+
+
+		})
+
+		let btnmusicstop =
+			document.querySelector("#btnmusicstop");
+
+		btnmusicstop.addEventListener("click", function() {
+			audioEffect.pause();
+			console.log(this)
+
+		})
+
+	</script>
 
 </body>
 
