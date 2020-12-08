@@ -5,14 +5,16 @@
 	overflow-x: hidden;
 }
 
-/*/----------*audio buttons--------*/
+/*/----------*audio player--------*/
 .audiobuttons {
 	display: flex;
 	justify-content: flex-end;
-	padding-right: 8em;
+	padding-right: 7vw;
+	padding-top: 12px;
 
 }
 
+/*/----------*audio buttons--------*/
 /*
 .btnplay,
 .btnstop {
@@ -597,7 +599,7 @@ div.img {
 
 		justify-content: center;
 		padding-right: 0;
-		padding-top: 5px;
+		padding-top: 10px;
 	}
 
 
@@ -616,6 +618,7 @@ div.img {
 	.newhead5 {
 		padding-top: 14em;
 		font-size: 5.8vw;
+		margin-right: 0;
 
 
 		/*		display: grid;*/
