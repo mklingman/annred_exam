@@ -562,7 +562,8 @@ p {
 	padding-right: 4rem;
 	color: #eee;
 	font-size: 16px;
-	font-weight: lighter;
+	font-family: "lanord-light", sans-serif;
+	/*	font-weight: lighter;*/
 	word-break: keep-all;
 
 }
@@ -623,7 +624,8 @@ div.img {
 .newhead {
 	text-decoration: none;
 	color: #fff;
-	font-family: "lanord-bold", sans-serif;
+	font-family: "lanord-bold",
+		sans-serif;
 	letter-spacing: 2px;
 }
 
@@ -973,5 +975,7 @@ div.img {
 	.column2 {
 		overflow-x: visible;
 	}
+
+
 
 }
